@@ -1,0 +1,9 @@
+version: '3'
+services:
+  miniconda:
+    container_name: miniconda-jupyter
+    build: .
+    volumes:
+      - ./jupyter-notebook/notebooks:/opt/notebooks
+    ports:
+      - "8888:8888"
